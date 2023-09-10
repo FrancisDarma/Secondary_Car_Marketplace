@@ -6,7 +6,6 @@ Implementasi Prinsip RDBMS untuk perancangan database marketplace penjualan mobi
 * Mission Statement
 * Business Rules
 * Design Requirements
-* Design Decisions
 * ERD diagram
 
 # Database Purpose:
