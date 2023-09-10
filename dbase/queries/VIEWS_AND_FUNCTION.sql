@@ -62,6 +62,7 @@ CREATE VIEW all_advertised_cars
 	SELECT * FROM all_advertised_cars
 
 --CREATE FUNCTION MOBIL DIJUAL OLEH <NAMA CUSTOMER>----
+DROP FUNCTION check_mobil_yang_dijual_seller
 CREATE OR REPLACE FUNCTION check_mobil_yang_dijual_seller
 (
 nama_seller VARCHAR
@@ -83,21 +84,21 @@ $$
 BEGIN
 	RETURN QUERY
 	SELECT 
-		DISTINCT B_product_id AS product_id,
-		B_seller_id AS seller_id,
+		DISTINCT B.product_id AS product_id,
+		B.seller_id AS seller_id,
 		D.seller_name AS seller_name,
-		D_brand AS brand,
-		D_model AS model,
-		D_year_made AS year_made,
-		D_price AS price,
-		B_adv_date AS adv_date,
-		B_city_id AS city_id
+		B.brand AS brand,
+		B.model AS model,
+		B.year_made AS year_made,
+		B.price AS price,
+		B.adv_date AS adv_date,
+		B.city_id AS city_id
 	FROM all_advertised_cars B
 	LEFT JOIN
 	SELLER D
-	ON B.B_seller_id = D.seller_id
+	ON B.seller_id = D.seller_id
 	WHERE D.seller_name LIKE '%' || nama_seller || '%'
-	ORDER BY B_adv_date DESC;
+	ORDER BY B.adv_date DESC;
 END;
 $$ 
 LANGUAGE plpgsql;
