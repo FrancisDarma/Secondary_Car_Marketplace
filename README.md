@@ -14,28 +14,16 @@ Implementasi Prinsip RDBMS untuk perancangan database marketplace penjualan mobi
 
 # Business Rules:
 
-* Employee entity will have information of all hospital employee login information and which Admin (Employee) created other Employees (Doctor, Nurse, Lab assistant) 
-* Employee Details will have information of Hospital employees (Admin, Doctor, Nurse, Lab Assistant) differentiated by Role.
-* Patient has all demographic information related to Patient.
-* Address can have multiple (current, previous) address for each patient and Hospital employees.
-* Department has information related to hospital entities (Dental, Pediatric, Emergency, Physical therapy, etc.)
-* Each doctor (Employee) may access one or more appointments.
-* Each patient may check one or more appointments.
-* Each patient may have more attendant (Doctor, Nurse, Lab assistant) per visit.
-* Patient Register will have information of patient visit to hospital. One patient can have multiple visit.
-* Feedback can be given by a Patient to a Hospital employee.
-* Patient Billing will have information related to a Patient visit. It can also have multiple entry depend on type of changes (Transaction Type: Insurance bill, Attendant Bill, Lab Bill etc.)
+<img src='./images/initial_business_constraint.png' />
 
 
 # Design Requirements:
 
-* Use Crow’s Foot Notation.
-* Specify the primary key fields in each table by specifying PK beside the fields.
-* Draw a line between the fields of each table to show the relationships between each table. This line should be pointed directly to the fields in each table that are used to form the relationship.
-* Specify which table is on the one side of the relationship by placing a one next to the field where the line starts.
-* Specify which table is on the many side of the relationship by placing a crow’s feet symbol next to the field where the line ends. 
+* Definisikan hubungan Parent dan Child Table menggunakan Primary Key dan Foreign Key.
+* Data set disiapkan dengan program python dan siap langsung digunakan.
+* Buat views yang berisi query transaksi yang akan sering digunakan user, dan query analytics yang akan membantu analisa bisnis sehari-hari.
 
 
 # ER Diagram:
 
-![](https://github.com/anwesh90/Hospital-Management-System/blob/master/ERD/Physical_DataModel.png)
+<img src='./images/ERD.pgerd.png' />
