@@ -1,6 +1,6 @@
 # Secondary Car Marketplace
-# About
-Implementasi Prinsip RDBMS untuk perancangan database marketplace penjualan mobil bekas.
+# About and Overview
+Sebuah bisnis marketplace ingin membuat sistem manajemen data yang rapih dan efisien. Mereka ingin data tersimpan dalam sebuah kategori dan secara intuitif mudah dipahami. Selain itu data akan di inject secara realtime tergantung pada aktivitas dan traffic user dalam web. Pada projek ini, saya menerapkan prinsip RDBMS untuk perancangan database yang dapat memecahkan masalah diatas.
 
 # Summary
 * Mission Statement
